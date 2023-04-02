@@ -1,10 +1,21 @@
+@font-face {
+  font-family: Outfit;
+  src: url(fonts/Outfit/static/Outfit-Regular.ttf);
+}
+@font-face {
+  font-family: Outfit;
+  src: url(fonts/Outfit/static/Outfit-Bold.ttf);
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  max-height: 275px;
   pointer-events: none;
+  border-radius: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +25,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /*make background color gradient from white in upper left corner to gray in lower right corner*/
+  /*  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,128,128,1) 100%);*/
+  /*  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,128,128,1) 100%);*/
+  background-color: hsl(212, 45%, 89%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +42,53 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*@keyframes App-logo-spin {*/
+/*  from {*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*  to {*/
+/*    transform: rotate(360deg);*/
+/*  }*/
+/*}*/
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 307px;
+  height: 450px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 1px 40px 0 rgba(0, 0, 0, 0.01), 0 15px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: hsl(218, 44%, 22%);
+  font-family: Outfit, sans-serif;
+}
+
+.card-text {
+  font-size: 15px;
+  font-family: Outfit, sans-serif;
+  color: hsl(220, 15%, 55%);
+}
+
+.card-body {
+  padding-inline: 33px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+  color: hsl(218, 44%, 22%);
+  font-family: Outfit, sans-serif;
+  margin-block: 15px;
+}
+p {
+  margin-block: 0px;
 }
